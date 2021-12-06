@@ -1,0 +1,27 @@
+﻿@using web_app.Model;
+@model IEnumerable<TestCar>;
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta name='viewport' content='width=device-width' />
+        <title>List</title>
+    </head>
+    <body>
+        <h1>All Cars</h1>
+        @{
+            foreach(var car in Model)
+            {
+                <div>
+                    <h2>Модель: @car.Name</h2>
+                    <p>Цена: @car.Price.ToString()</p>
+                </div>
+            }
+        }
+    </body>
+</html>
